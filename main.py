@@ -3,7 +3,8 @@
 # Jeu_De_Devinette_2.0
 import random
 
-
+nombre = input("Voulez-vous choisir vos chiffres?")
+if nombre == non 
 nombreEssai = 0
 chiffre1 = int(input("Entrer le premier chiffre"))
 chiffre2 = int(input("Entrer le deuxieme chiffre"))
