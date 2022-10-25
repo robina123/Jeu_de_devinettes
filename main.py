@@ -10,14 +10,16 @@ nombreEssai = 0
 demander = input('voulez vous choisir vos chiffres? (oui/non)\n Si vous ne mettez pas le bon resultat vos chiffres seront choisi automatiquement!')
 
 if demander == 'oui':
-#Si l'utilisateur
+#Si l'utilisateur veut choisir ses chiffres et lui demander quel sont les chiffres
     nombreEssai = 0
     chiffre1 = int(input("Entrer le premier chiffre"))
     chiffre2 = int(input("Entrer le deuxieme chiffre"))
 else:
+# si l'utiliseur ne repond pas a la premiere question ou mal je dit que le chiffre recherche est entre 0 et 100
     chiffre1 = 0
     chiffre2 = 100
     print('Le chiffre recherché est entre 0 et 100')
+# trouve un nombre entre les bornes misent en place aupravant 
 chiffreRandom = random.randint(chiffre1, chiffre2)
 def Jeu_de_devinette():
     global nombreEssai
@@ -32,7 +34,7 @@ def Jeu_de_devinette():
             print("Bravo!\n", "Vous avez reussi en ", nombreEssai, "essais")
             demanderRecommencer = True
         elif chiffreRentrer < chiffreRandom:
-            # si le chiffre est trop petitimport random
+            # si le chiffre est trop petit
             print("Le chiffre est plus grand")
             nombreEssai = nombreEssai + 1
         elif chiffreRentrer > chiffreRandom:
