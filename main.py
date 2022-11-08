@@ -28,7 +28,7 @@ def initialisationdelapartie():
     # trouve un nombre entre les bornes misent en place aupravant
     chiffrerandom = random.randint(chiffre1, chiffre2)
 
-
+#permet de dire a l utilisateur en combien d essai il a trouver le chiffre 
 def turn():
     global nombreessai
     global chiffrerentrer
@@ -40,7 +40,7 @@ def turn():
         nombreessai = nombreessai + 1
         print("Bravo!\n", "Vous avez reussi en ", nombreessai, "essais")
         return True
-
+#dis a l'utilisateur si son chiffre est plus grand ou plus petit
     elif chiffrerentrer < chiffrerandom:
         # si le chiffre est trop petit
         print("Le chiffre est plus grand")
@@ -57,13 +57,15 @@ def game():
     while not turn():
         continue
 
-
+#demander a l utilisateur si il veut recommencer et si il dit ou le jeu recommande 
 def recommencer():
     choix = input("Voulez vous jouer? (oui/non)")
     if choix == 'oui':
         return True
     elif choix == 'non':
         return False
+    
+#tout les fonctions sont mises ensemble 
 def main():
     while recommencer():
         game()
