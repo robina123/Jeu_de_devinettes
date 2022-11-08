@@ -1,26 +1,31 @@
-
-
 # arthur robin
 # 2022-09-04
-# Jeu_De_Devinette_2.0
-#J'importe random et je mets le nombre d'essai a zero
+# Jeu_De_Devinette
 import random
+def nombrerandom():
+    #J'importe random et je mets le nombre d'essai a zero
+global chiffre1
+global chiffre2 
+global nombreessai
+global demander 
+global chiffrerandom
 nombreEssai = 0
 #Je demande a 'utilisateur si il veut choisir ces chiffres ou non
 demander = input('voulez vous choisir vos chiffres? (oui/non)\n Si vous ne mettez pas le bon resultat vos chiffres seront choisi automatiquement!')
-
 if demander == 'oui':
 #Si l'utilisateur veut choisir ses chiffres et lui demander quel sont les chiffres
-    nombreEssai = 0
+    nombreessai = 0
     chiffre1 = int(input("Entrer le premier chiffre"))
     chiffre2 = int(input("Entrer le deuxieme chiffre"))
 else:
-# si l'utiliseur ne repond pas a la premiere question ou mal je dit que le chiffre recherche est entre 0 et 100
+# Si l'utiliseur ne repond pas a la premiere question ou mal je dit que le chiffre recherche est entre 0 et 100
     chiffre1 = 0
     chiffre2 = 100
     print('Le chiffre recherché est entre 0 et 100')
 # trouve un nombre entre les bornes misent en place aupravant 
-chiffreRandom = random.randint(chiffre1, chiffre2)
+chiffrerandom = random.randint(chiffre1, chiffre2)
+
+
 def Jeu_de_devinette():
     global nombreEssai
     fin = True
