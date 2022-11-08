@@ -26,19 +26,16 @@ else:
 chiffrerandom = random.randint(chiffre1, chiffre2)
 
 
-def Jeu_de_devinette():
-    global nombreEssai
-    fin = True
-    while fin:
-        demanderRecommencer = False
+def essai():
+    global nombreessai
         # choix de l'utilisateur
-        chiffreRentrer = int(input("Trouver le nombre recherché\nQuel est votre réponse?"))
-        if chiffreRentrer == chiffreRandom:
+        chiffrerentrer = int(input("Trouver le nombre recherché\nQuel est votre réponse?"))
+        if chiffrerentrer == chiffreRandom:
             # si le joueur reussi
             nombreEssai = nombreEssai + 1
             print("Bravo!\n", "Vous avez reussi en ", nombreEssai, "essais")
-            demanderRecommencer = True
-        elif chiffreRentrer < chiffreRandom:
+          
+        elif chiffrerentrer < chiffreRandom:
             # si le chiffre est trop petit
             print("Le chiffre est plus grand")
             nombreEssai = nombreEssai + 1
@@ -46,14 +43,6 @@ def Jeu_de_devinette():
             # si le chiffre est trop grand
             print("Le chiffre est plus petit")
             nombreEssai = nombreEssai + 1
-        if demanderRecommencer == True:
-            recommencer = input("voulez vous recommencez?")
-            if recommencer == "non":
-                print("Merci d'avoir joué")
-                exit()
-            elif recommencer == "oui":
-                break
-
-Jeu_de_devinette()
+        
 
 
