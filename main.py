@@ -28,6 +28,8 @@ chiffrerandom = random.randint(chiffre1, chiffre2)
 
 def essai():
     global nombreessai
+    global chiffrerentrer
+    global chiffrerandom
         # choix de l'utilisateur
         chiffrerentrer = int(input("Trouver le nombre recherché\nQuel est votre réponse?"))
         if chiffrerentrer == chiffreRandom:
@@ -35,14 +37,15 @@ def essai():
             nombreEssai = nombreEssai + 1
             print("Bravo!\n", "Vous avez reussi en ", nombreEssai, "essais")
           
-        elif chiffrerentrer < chiffreRandom:
+        elif chiffrerentrer < chiffrerandom:
             # si le chiffre est trop petit
             print("Le chiffre est plus grand")
             nombreEssai = nombreEssai + 1
-        elif chiffreRentrer > chiffreRandom:
+        elif chiffrerentrer > chiffrerandom:
             # si le chiffre est trop grand
             print("Le chiffre est plus petit")
-            nombreEssai = nombreEssai + 1
+            nombreessai = nombreessai + 1
         
 
-
+def main():
+    while != a
